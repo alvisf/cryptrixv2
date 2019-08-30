@@ -41,6 +41,7 @@ var firebaseConfig = {
     delTop();
     creDit();
     // serverReq();
+    rDone();
   }
 
   function serverReq(){
@@ -119,3 +120,13 @@ function saveVal(hah,lol){
             console.log("made by Dennis.F");
         
     }
+
+    function rDone(){
+
+      $(document).ready(function(){
+           $('#alvisdis').html('<h1><br><center>SUCCESSFULLY REGISTERED!</center></h1>\n<h1><br><center>THANK YOU FOR REGISTERING!</center></h1>\n<h1 style="font-size:5vw;">\n<br>\n<center>YOUR CRYPTRIX 2K19 ID IS:\n<span style="color: red">CRX'+childVal+'</span>\n</center>\n</h1>\n<h1>\n<br>\n<center>PLEASE BRING THIS CRYPTRIX ID ON THE DAY OF THE SYMPOSIUM</center>\n</h1>\n<h1>\n<br>\n<center>A CONFIRMATION MAIL HAS BEEN SENT TO YOUR EMAIL ADDRESS</center>\n</h1>\n');
+
+      });
+
+
+  }
