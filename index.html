@@ -247,7 +247,7 @@ Operating systems.</p><br><br>
 						</div>
 					</div>
 					<div class="content-content content-content--contact" id="content-content--contact">
-      	    <form action="action_page.php">
+      	    <form id="alvissubmit">
   <div class="container">
     <h1>Register</h1>
     <p>NOTE:ONE TIME REGISTRATION LETS YOU PARTICIPATE IN ALL FIVE OF OUR EXCITING EVENTS.</p>
@@ -255,29 +255,29 @@ Operating systems.</p><br><br>
     <hr>
 
     <label for="danny6"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="danny6" required>
+    <input type="text" placeholder="Enter Name" name="danny6" id="name" required>
     
     <label for="lunch1"><b>Gender</b></label>
-<select name="my_html_select_box" style="color: white;width: 100%;padding: 12px; background-color: dodgerblue;">
+<select name="my_html_select_box" id="sex" style="color: white;width: 100%;padding: 12px; background-color: dodgerblue;">
 	<option value="0">Male</option>
 	<option value="1">Female</option>
       </select>   
     
     <label for="danny1"><b>Name of University/College</b></label>
-    <input type="text" placeholder="Enter name of University/College" name="danny1" required>
+    <input type="text" placeholder="Enter name of University/College" id="college" name="danny1" required>
     
     <label for="danny2"><b>Register number/Roll number</b></label>
-    <input type="text" placeholder="Enter Register number/Roll Number" name="danny2" required>
+    <input type="text" placeholder="Enter Register number/Roll Number" id="regno" name="danny2" required>
     
     <label for="danny3"><b>Contact Number</b></label>
-    <input type="number" placeholder="Enter your Contact Number" name="danny3" required>
+    <input type="number" placeholder="Enter your Contact Number" id="phone" name="danny3" required>
     
     <label for="danny4"><b>Email</b></label>
-    <input type="email" placeholder="Enter Email" name="danny4" required>  
+    <input type="email" placeholder="Enter Email" id="email" name="danny4" required>  
     
     <label for="lunch"><b>Lunch Preference</b></label>
    
-<select name="my_html_select_box" style="color: white;width: 100%;padding: 15px;background-color: dodgerblue;">
+<select id="food" name="my_html_select_box" style="color: white;width: 100%;padding: 15px;background-color: dodgerblue;">
 	<option value="0">Non-Veg </option>
     <option value="1">Veg</option>
 </select>
@@ -305,5 +305,10 @@ Operating systems.</p><br><br>
 	    <script src="_assets/wiresphere.js"></script>
         </div>
 
+        <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+        <script src="alvis.js"></script>
     </body>
 </html>
