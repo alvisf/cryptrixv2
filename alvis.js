@@ -77,12 +77,13 @@ var firebaseConfig = {
       if(!exists){
         loadMessage(alviscollege,alvisemail,alvisgender,alvisregno,alvisphone,alvisname,alvisfood);
         delTop();
-        break;
+        
       }
       else{
         loadd();
 
       }
+      break;
       }
    }
     function saveMessage(e){
@@ -150,9 +151,10 @@ function saveVal(hah,lol){
   var exists;
 
   function checkIfUserExists(userId) {
+
     var usersRef = firebase.database().ref('RegisteredUsers');
     usersRef.child(userId).once('value', function(snapshot) {
-      exists = (snapshot.val() !== null);
+      exists = (snapshot.exists());
       console.log(exists);
     });
   }
