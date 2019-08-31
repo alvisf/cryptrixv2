@@ -17,7 +17,8 @@ var firebaseConfig = {
   
   var messagesRef = firebase.database().ref('RegisteredUsers');
 
-  stackTop();
+
+  
   
   document.getElementById('alvissubmit').addEventListener('submit', saveMessage);
   
@@ -40,7 +41,7 @@ var firebaseConfig = {
       v:alvisfood
     });
 
-    delTop();
+    
     creDit();
     // serverReq();
     rDone();
@@ -67,9 +68,26 @@ var firebaseConfig = {
 
    
    }
+   function loadd(alviscollege,alvisemail,alvisgender,alvisregno,alvisphone,alvisname,alvisfood){
+    stackTop();
+
+    while(childVal!=null){
+      checkIfUserExists(childVal);
+      
+      if(!exists){
+        loadMessage(alviscollege,alvisemail,alvisgender,alvisregno,alvisphone,alvisname,alvisfood);
+        delTop();
+        break;
+      }
+      else{
+        loadd();
+
+      }
+      }
+   }
     function saveMessage(e){
       e.preventDefault();
-      stackTop();
+      
       var alviscollege = getInputVal('college');
       var alvisemail = getInputVal('email');
       var alvisgender = getInputVal('sex');
@@ -78,11 +96,7 @@ var firebaseConfig = {
       var alvisname = getInputVal('name');
       var alvisfood = ("1"=== getInputVal('food').toString());
 
-      while(childVal!=null){
-
-      loadMessage(alviscollege,alvisemail,alvisgender,alvisregno,alvisphone,alvisname,alvisfood);
-      break;
-      }
+      loadd(alviscollege,alvisemail,alvisgender,alvisregno,alvisphone,alvisname,alvisfood);
 //     var ref = firebase.database().ref('unqId');
 //     ref.orderByValue().limitToFirst(1).once("value", function(snapshot) {
 //       console.log(ref.child("unqId"));
@@ -113,6 +127,7 @@ function saveVal(hah,lol){
    }, function (error) {
       console.log("Error: " + error.code);
    });
+   
     }
 
     function creDit(){
@@ -131,4 +146,13 @@ function saveVal(hah,lol){
       });
 
 
+  }
+  var exists;
+
+  function checkIfUserExists(userId) {
+    var usersRef = firebase.database().ref('RegisteredUsers');
+    usersRef.child(userId).once('value', function(snapshot) {
+      exists = (snapshot.val() !== null);
+      console.log(exists);
+    });
   }
