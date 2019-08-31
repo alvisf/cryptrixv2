@@ -1,7 +1,7 @@
 "use strict";
 // Wiresphere config file
 // Do not delete anything from this file!
-
+var colp =["#800080","003d4f"];
 var WiresphereConfig = {
 	Background: {
 		SolidBg: {							

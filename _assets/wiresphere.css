@@ -142,7 +142,7 @@ a.nice-link:hover>.hover>span:nth-child(4) {
     height: 100%
 }
 .stage>.backgroundStack>.backgroundStack-solidColor {
-    background: #463760
+    background: #bb3513
 }
 .stage>.backgroundStack>.backgroundStack-noise {
     background: url(../_assets/noise.gif)
@@ -200,6 +200,7 @@ a.nice-link:hover>.hover>span:nth-child(4) {
 }
 .stage>.stage-logo {
     position: absolute;
+    width: 94%;
     top: 50px;
     left: 3%;
 }
@@ -219,6 +220,7 @@ a.nice-link:hover>.hover>span:nth-child(4) {
     font-weight: 700;
     margin: 0;
     padding: 0;
+    -webkit-column-width: 50%;
 }
 @media screen and (max-width: 800px),
 screen and (max-height: 640px) {

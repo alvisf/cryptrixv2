@@ -2,6 +2,8 @@ var childVal=null;
 var keyVal=null;
 
 
+
+
 var firebaseConfig = {
     apiKey: "AIzaSyBFo7mBVgXTNmuKFI9ZDQ_yh64XKjEMAeA",
     authDomain: "cryptrix-2k19.firebaseapp.com",
@@ -67,8 +69,8 @@ var firebaseConfig = {
    }
     function saveMessage(e){
       e.preventDefault();
-
-      var alviscollege = getInputVal('name');
+      stackTop();
+      var alviscollege = getInputVal('college');
       var alvisemail = getInputVal('email');
       var alvisgender = getInputVal('sex');
       var alvisregno = getInputVal('regno');
