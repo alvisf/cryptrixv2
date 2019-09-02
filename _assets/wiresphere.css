@@ -243,7 +243,7 @@ a.nice-link:hover > .hover > span:nth-child(4) {
   top: 50px;
   left: 50px;
   font-size: 25px;
-  padding-left: 65%;
+  padding-left: 55%;
 }
 .stage > .stage-logo h1 {
   font-size: 3.5em;
@@ -521,12 +521,34 @@ a.nice-link:hover > .hover > span:nth-child(4) {
 }
 @media screen and (max-width: 600px) {
   .daniel_david {
-    visibility: hidden;
-    clear: both;
+    /* clear: both; */
     float: left;
-    margin: 10px auto 5px 20px;
+    /* margin: 10px auto 5px 20px; */
     width: 28%;
-    display: none;
+  }
+  ul#example {
+    list-style: none;
+    margin: 50px 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+  }
+  ul#example li {
+    display: inline-block;
+  }
+  ul#example li span {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 80px;
+  }
+  ul#example li.seperator {
+    font-size: 40px;
+    line-height: 70px;
+    vertical-align: top;
+  }
+  ul#example li p {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
   }
 }
 
