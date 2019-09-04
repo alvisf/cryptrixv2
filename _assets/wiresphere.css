@@ -237,11 +237,14 @@ a.nice-link:hover > .hover > span:nth-child(4) {
   left: 3%;
 }
 .stage > .daniel_david {
+  width: 100%;
+  white-space: nowrap;
   position: absolute;
-  text-align: left;
-  right: 0px;
-  top: 50px;
-  left: 50px;
+  top: 45%;
+  left: 40px;
+
+  text-align: right;
+  right: 50px;
   font-size: 25px;
   padding-left: 55%;
 }
@@ -265,6 +268,9 @@ a.nice-link:hover > .hover > span:nth-child(4) {
   .stage > .stage-header h2,
   .stage > .stage-logo h1 {
     font-size: 1.5em;
+  }
+  .daniel_david {
+    text-align: left;
   }
 }
 .stage > .stage-nav {

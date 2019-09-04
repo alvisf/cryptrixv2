@@ -177,7 +177,7 @@ var exists;
 
 function lastNum() {
   var min = 0;
-  var max = 9;
+  var max = 99;
   var random = Math.floor(Math.random() * (+max - +min)) + +min;
   return random;
 }
