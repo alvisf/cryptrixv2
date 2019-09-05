@@ -1,4 +1,5 @@
 var childVal = null;
+var exists;
 var keyVal = null;
 var lastNo = lastNum();
 var firebaseConfig = {
@@ -95,6 +96,7 @@ function loadd(
     break;
   }
 }
+var phnnn;
 function saveMessage(e) {
   e.preventDefault();
 
@@ -103,8 +105,10 @@ function saveMessage(e) {
   var alvisgender = getInputVal("sex");
   var alvisregno = getInputVal("regno");
   var alvisphone = getInputVal("phone");
+  var phnnn = getInputVal("phone");
   var alvisname = getInputVal("name");
   var alvisfood = "1" === getInputVal("food").toString();
+  var usersRef = firebase.database().ref("RegisteredUsers");
 
   loadd(
     alviscollege,
@@ -165,7 +169,6 @@ function rDone() {
     );
   });
 }
-var exists;
 
 // function checkIfUserExists(userId) {
 //   var usersRef = firebase.database().ref("RegisteredUsers");
