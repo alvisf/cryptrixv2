@@ -1,7 +1,10 @@
 var childVal = null;
 var exists;
+var cid;
+var recepient;
 var keyVal = null;
 var lastNo = lastNum();
+var xhttp = new XMLHttpRequest();
 var firebaseConfig = {
   apiKey: "AIzaSyBFo7mBVgXTNmuKFI9ZDQ_yh64XKjEMAeA",
   authDomain: "cryptrix-2k19.firebaseapp.com",
@@ -48,17 +51,15 @@ function loadMessage(
   // serverReq();
   rDone();
 }
-
-function serverReq() {
-  var xhttp = new XMLHttpRequest();
+function sendemail() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      // document.getElementById("demo").innerHTML = this.responseText;
-      console.log("works");
+      console.log(this.responseText);
     }
   };
-  xhttp.open("POST", "demo_post.asp", true);
-  xhttp.send();
+  xhttp.open("POST", "http://java-mail-heroku.herokuapp.com/MailServlet", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send(recepient);
 }
 function delTop() {
   var ref = firebase.database().ref("unqId");
@@ -96,7 +97,7 @@ function loadd(
     break;
   }
 }
-var phnnn;
+
 function saveMessage(e) {
   e.preventDefault();
 
@@ -105,10 +106,11 @@ function saveMessage(e) {
   var alvisgender = getInputVal("sex");
   var alvisregno = getInputVal("regno");
   var alvisphone = getInputVal("phone");
-  var phnnn = getInputVal("phone");
   var alvisname = getInputVal("name");
   var alvisfood = "1" === getInputVal("food").toString();
-  var usersRef = firebase.database().ref("RegisteredUsers");
+  // var usersRef = firebase.database().ref("RegisteredUsers");
+
+  recepient = "recepient=" + alvisemail;
 
   loadd(
     alviscollege,
@@ -160,6 +162,8 @@ function creDit() {
 }
 
 function rDone() {
+  cid = "cid=CRX" + childVal + lastNo;
+  sendemail();
   $(document).ready(function() {
     $("#alvisdis").html(
       '<h1><br><center>SUCCESSFULLY REGISTERED!</center></h1>\n<h1><br><center>THANK YOU FOR REGISTERING!</center></h1>\n<h1 style="font-size:5vw;">\n<br>\n<center>YOUR CRYPTRIX 2K19 ID IS:\n<span style="color: red">CRX' +
