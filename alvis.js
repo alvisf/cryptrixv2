@@ -57,7 +57,11 @@ function sendemail() {
       console.log(this.responseText);
     }
   };
-  xhttp.open("POST", "http://java-mail-heroku.herokuapp.com/MailServlet", true);
+  xhttp.open(
+    "POST",
+    "https://java-mail-heroku.herokuapp.com/MailServlet",
+    true
+  );
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send(recepient);
 }
