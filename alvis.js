@@ -64,6 +64,7 @@ function sendemail() {
   );
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send(recepient);
+  xhttp.send(cid);
 }
 function delTop() {
   var ref = firebase.database().ref("unqId");
