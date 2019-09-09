@@ -1,0 +1,36 @@
+ul#example {
+  list-style: none;
+  margin: 50px 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+ul#example li {
+  display: inline-block;
+}
+ul#example li span {
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 80px;
+}
+ul#example li.seperator {
+  font-size: 2em;
+  line-height: 70px;
+  vertical-align: top;
+}
+ul#example li p {
+  color: #a7abb1;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 800px), screen and (max-height: 640px) {
+  ul#example {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  ul#example {
+    display: none;
+  }
+}
