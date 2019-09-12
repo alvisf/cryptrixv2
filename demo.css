@@ -5,3 +5,7 @@ body {
   font: normal 12px "Open Sans", sans-serif;
   margin-top: 20px;
 }
+.content-textwrapper > p {
+  line-height: 50px;
+  font-size: 20px;
+}
