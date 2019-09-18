@@ -63,8 +63,8 @@ function sendemail() {
     true
   );
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  var sende = recepient + "&" + cid;
-  xhttp.send(sende);
+  // var sende = recepient + "&" + cid;
+  // xhttp.send(sende);
 }
 function delTop() {
   var ref = firebase.database().ref("unqId");
@@ -171,14 +171,13 @@ function rDone() {
   sendemail();
   $(document).ready(function() {
     $("#alvisdis").html(
-      '<h1><br><center>SUCCESSFULLY REGISTERED!</center></h1>\n<h1><br><center>THANK YOU FOR REGISTERING!</center></h1>\n<h1 style="font-size:5vw;">\n<br>\n<center>YOUR CRYPTRIX 2K19 ID IS:\n<span style="color: red">CRX' +
-        childVal +
-        lastNo +
-        "</span>\n</center>\n</h1>\n<h1>\n<br>\n<center>PLEASE BRING THIS CRYPTRIX ID ON THE DAY OF THE SYMPOSIUM</center>\n</h1>\n<h1>\n<br>\n<center>A CONFIRMATION MAIL HAS BEEN SENT TO YOUR EMAIL ADDRESS</center>\n</h1>\n"
+      '<h1><br><center>Sorry the Registration is closed!!!</center></h1>\n<h1><br><center>We be back next year. Stay tuned</center></h1>\n<h1 style="font-size:5vw;">\n<br>\n<center>SORRY!!!!\n<span style="color: red">Thank you.....'
+      // childVal +
+      // lastNo
     );
   });
 }
-
+// "</span>\n</center>\n</h1>\n<h1>\n<br>\n<center>PLEASE BRING THIS CRYPTRIX ID ON THE DAY OF THE SYMPOSIUM</center>\n</h1>\n<h1>\n<br>\n<center>A CONFIRMATION MAIL HAS BEEN SENT TO YOUR EMAIL ADDRESS</center>\n</h1>\n"
 // function checkIfUserExists(userId) {
 //   var usersRef = firebase.database().ref("RegisteredUsers");
 //   usersRef.child(userId).once("value", function(snapshot) {
