@@ -1,6 +1,7 @@
 # Cryptrix 
 2019 St.Joseph's college of engineering Symposium 
 
+### Checkout : https://flamboyant-ramanujan-fa1e84.netlify.app/
 ## Task 
 
 A Registration website (reactive to cursur). which can be hosted with github hosting site. you can add your own firebase to act as a database.
