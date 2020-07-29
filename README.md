@@ -4,24 +4,23 @@
 ### Checkout : https://flamboyant-ramanujan-fa1e84.netlify.app/
 ## Task 
 
-A Registration website (reactive to cursur). which can be hosted with github hosting site. you can add your own firebase to act as a database.
+A Registration website which is reactive to the cursor. Hosted with GitHub hosting site. Used firebase to act as a database.
 
 ## Technology Stack 
 
-This consist of only the web page build with JavaScript, HTML and CSS.  
+This consist of only the web page builds with JavaScript, HTML and CSS.  
 
-The backend wihich send email conformation is made with Spring JAVA.
+The microservice will send email confirmation made in Spring JAVA.
 
-Firebase FireStone is used as a database.
+Firebase FireStone for the database.
 
 ## Advantages  
 
-No need to run it on a server.
-   
-## What I have learnt 
+Does not need a server   
+## Lessons Learnt 
  
 - Create a serverless application.
-- How to use NOSQL in realtime
-- Depoying application
+- How to use NoSQL in realtime
+- Deploying application
  
 ![Alt Text](https://media.giphy.com/media/Rjke13oBKgJ3cyimBi/giphy.gif)
